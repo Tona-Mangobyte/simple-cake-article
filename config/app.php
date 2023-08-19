@@ -353,6 +353,14 @@ return [
      * Configures logging options
      */
     'Log' => [
+        'info' => [
+            'className' => FileLog::class,
+            'path' => LOGS,
+            'file' => 'info',
+            'url' => env('LOG_INFO_URL', null),
+            'scopes' => false,
+            'levels' => ['notice', 'info', 'debug'],
+        ],
         'debug' => [
             'className' => FileLog::class,
             'path' => LOGS,
